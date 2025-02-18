@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="grey">#b0b0b0</color>
+    <color name="white">#E6E6E6</color>
+    <color name="drawable_background">#FFFFFF</color>
+    <color name="button_text">#FFFFFF</color>
+    <color name="writing">#FF000000</color>
+    <color name="green_background">#42953f</color>
+    <color name="green_navbar">#42953f</color>
+</resources>

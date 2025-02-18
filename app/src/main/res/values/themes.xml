@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.AppMovel_PIS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Status Bar Color -->
+        <item name="android:statusBarColor">@color/green_navbar</item>
+
+        <!-- Navigation Bar Color -->
+        <item name="android:navigationBarColor">#FF000000</item>
+    </style>
+</resources>

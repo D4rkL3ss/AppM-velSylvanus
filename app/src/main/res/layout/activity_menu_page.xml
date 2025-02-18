@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- App Header -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/logo_sylvanus_foreground"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/headerDivider" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sylvanus Inc."
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/appLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/headerDivider" />
+
+    <!-- Header Divider -->
+    <View
+        android:id="@+id/headerDivider"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/headerDivider"
+        app:layout_constraintBottom_toTopOf="@id/footerDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:background="@drawable/fragment_background">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/menuFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+    <!-- Footer Divider -->
+    <View
+        android:id="@+id/footerDivider"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@color/black"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/green_navbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/iconSensorImageView"
+            android:clickable="false"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_sensor"
+            android:contentDescription="Home"
+            app:tint="@color/black"/>
+
+
+        <ImageView
+            android:id="@+id/iconInstallImageView"
+            android:clickable="true"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_install"
+            android:layout_marginEnd="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            android:contentDescription="Grid"
+            app:tint="@color/black"/>
+
+        <ImageView
+            android:id="@+id/iconProfileImageView"
+            android:clickable="true"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_profile"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="User"
+            app:tint="@color/black"/>
+
+        <ImageView
+            android:id="@+id/iconInformationImageView"
+            android:clickable="true"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_info"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="Menu"
+            app:tint="@color/black"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
