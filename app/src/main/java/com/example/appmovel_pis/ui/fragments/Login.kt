@@ -38,6 +38,12 @@ class LoginFragment : Fragment() {
         val emailEditText = view.findViewById<EditText>(R.id.etEmail)
         val passwordEditText = view.findViewById<EditText>(R.id.etPassword)
         val loginButton = view.findViewById<Button>(R.id.btnLogin)
+        val SkipButton = view.findViewById<Button>(R.id.btnSkip)
+
+        SkipButton.setOnClickListener {
+            val intent = Intent(requireContext(), MenuPage::class.java)
+            startActivity(intent)
+        }
 
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
